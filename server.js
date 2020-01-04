@@ -15,8 +15,8 @@ server.get("/json", (req, res) => {
  const port = 3000;
  server.use(body_parser.json())
 
-server.listen(port, () => {
-    console.log(`Server listening at ${port}`);
+server.listen(port, function() {
+    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
 
 let data = require('./data');
