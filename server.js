@@ -16,7 +16,7 @@ server.get("/json", (req, res) => {
  //const _port = 3000;
  server.use(body_parser.json())
 
- app.listen(PORT, () => {
+ server.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
