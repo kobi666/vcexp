@@ -10,13 +10,14 @@ server.get("/json", (req, res) => {
     res.sendFile(__dirname + '/index.html');
  });
 
- const PORT = process.env.PORT || 80;
+ const PORT = process.env.PORT || 3000;
+
  const body_parser = require('body-parser');
- const _port = 3000;
+ //const _port = 3000;
  server.use(body_parser.json())
 
-server.listen(PORT, function() {
-    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+ app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 let data = require('./data');
